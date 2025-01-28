@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartCity Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+  <header class="p-16 bg-cover bg-center text-white text-center font-bold" style="background-image: url('k.jpg');">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl">Kolhapur SmartCity</h1>
+    <p class="mt-4 text-lg sm:text-xl">Your gateway to a smarter, more connected city</p>
+  </header>
+</head>
+<body class="min-h-screen bg-gray-100">
+  <main class="p-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <!-- Real-time Data Visualization -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Real-time Data Visualization</h2>
+      <img src="t.jpg" alt="Traffic Updates" class="my-2 rounded h-48 w-full object-cover">
+      <p>Live data on traffic conditions across the city.</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Weather Conditions</h2>
+      <img src="w..jpg" alt="Weather Conditions" class="my-2 rounded h-48 w-full object-cover">
+      <p>Live weather updates with temperature and forecasts.</p>
+    </div>
+
+    <!-- User Personalization -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">User Personalization</h2>
+      <img src="pp.jpg" alt="User Customization" class="my-2 rounded h-48 w-full object-cover">
+      <button class="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Customize Dashboard</button>
+    </div>
+
+    <!-- Interactive Maps -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Interactive City Map</h2>
+      <div id="map" style="height: 256px;"></div>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const map = L.map('map').setView([51.505, -0.09], 13);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+          }).addTo(map);
+          L.marker([51.505, -0.09]).addTo(map);
+        });
+      </script>
+    </div>
+
+    <!-- Event Management Section -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Upcoming Events</h2>
+      <img src="u.jpg" alt="Events" class="my-2 rounded h-48 w-full object-cover">
+      <p>Discover and RSVP for city events.</p>
+    </div>
+
+    <!-- Emergency Alerts -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Emergency Alerts</h2>
+      <img src="ee.jpg" alt="Emergency Alerts" class="my-2 rounded h-48 w-full object-cover">
+      <p>Stay informed about road closures and weather emergencies.</p>
+    </div>
+
+    <!-- Gamification -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Gamification</h2>
+      <img src="g.jpg" alt="Gamification" class="my-2 rounded h-48 w-full object-cover">
+      <p>Earn badges for eco-friendly activities like using public transport.</p>
+    </div>
+
+    <!-- Responsive Design -->
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-lg font-semibold">Responsive Design</h2>
+      <img src="q.jpg" alt="Responsive Design" class="my-2 rounded h-48 w-full object-cover">
+      <p>Ensure the application works seamlessly on all devices.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+<footer class="p-6 bg-gray-800 text-white">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <!-- Left Side: Copyright -->
+        <div class="text-center md:text-left mb-4 md:mb-0">
+            &copy; 2025 SmartCity Dashboard. All rights reserved.
+        </div>
+
+        <!-- Center: Footer Links -->
+        <div class="flex justify-center space-x-4">
+            <a href="#" class="text-white hover:text-blue-400">Privacy Policy</a>
+            <a href="#" class="text-white hover:text-blue-400">Terms of Service</a>
+            <a href="#" class="text-white hover:text-blue-400">Contact Us</a>
+        </div>
+
+        <!-- Right Side: Social Media Links -->
+        <div class="flex justify-center space-x-4 mt-4 md:mt-0">
+            <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" class="text-white hover:text-blue-400">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+            </a>
+            <a href="https://www.twitter.com" class="text-white hover:text-blue-400">
+                <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+            </a>
+            <a href="https://www.instagram.com" class="text-white hover:text-blue-400">
+                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+            </a>
+            <a href="https://www.linkedin.com" class="text-white hover:text-blue-400">
+                <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+            </a>
+            <a href="https://www.youtube.com" class="text-white hover:text-blue-400">
+                <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+            </a>
+            <a href="https://www.pinterest.com" class="text-white hover:text-blue-400">
+                <i class="fab fa-pinterest"></i> <!-- Pinterest Icon -->
+            </a>
+            <a href="https://www.snapchat.com" class="text-white hover:text-blue-400">
+                <i class="fab fa-snapchat-ghost"></i> <!-- Snapchat Icon -->
+            </a>
+        </div>
+    </div>
+</footer>
+
+  
+  <!-- Add Font Awesome CDN for social media icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
